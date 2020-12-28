@@ -31,7 +31,7 @@ function displayWeatherCondition(response) {
       "Humidity: " + Math.round(response.data.main.humidity ) + "%";
     document.querySelector("#wind").innerHTML =
       "Wind: " + Math.round(response.data.wind.speed ) + " km/h";
-    document.querySelector("#chance-of-rain").innerHTML =
+    document.querySelector("#condition").innerHTML =
       "Condition: " + response.data.weather[0].main;
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
   }
@@ -73,7 +73,7 @@ function displayForecast15 (response) {
   let forecastWeather15 = document.querySelector("#forecast-weather-15");
   let tempMax = Math.round(response.data.list[4].main.temp_max);
   let tempMin = Math.round(response.data.list[4].main.temp_min);
-  forecastWeather15.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+  forecastWeather15.innerHTML = `${tempMax} °C | ${tempMin} °C`;
 }
 
 

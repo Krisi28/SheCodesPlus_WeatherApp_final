@@ -1,6 +1,18 @@
+h1 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #fca3cc;
+  padding: 10px 100px 10px 100px;
+  margin: 10px 260px 10px 260px;
+  background-color: #bde6eb;
+}
+
 .application {
     border: 2px solid #fca3cc;
     padding: 20px;
+    background-color: #fdcfdf;
   };
   
 .header {
@@ -14,17 +26,7 @@
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
   };
-  
-h1 {
-    margin-top: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #fca3cc;
-    padding: 10px 100px 10px 100px;
-    margin: 10px 260px 10px 260px;
-    background-color: #bde6eb;
-  };
+
   
 .card-text {
     font-size: 20px;
@@ -50,6 +52,10 @@ footer {
     margin-left: 50px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+#search-form {
+  text-align: center;
+}
   
 #current-location-button {
     background-color: #fca3cc;
@@ -67,19 +73,108 @@ footer {
     font-family: Arial, Helvetica, sans-serif;
   }
   
+#input-city {
+  color: #bde6eb;
+  background-color: white;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  border-radius: 5px;
+} 
+
+#current-time {
+  color: #bde6eb;
+  background-color: white;
+  font-weight: bold;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  border-radius: 5px;
+}
+
 #weather-input-city {
     color: #fca3cc;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
-#detail-chance-of-rain {
+#condition {
     color: #fdcfdf;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    border-radius: 5px;
   }
   
-#detail-high {
+#humidity{
     color: #fbbedf;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    border-radius: 5px;
   }
   
-#detail-low {
+#wind {
     color: #fca3cc;
+    background-color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 5px;
+    border-radius: 5px;
   }
   
+
+h5 {
+    color: #fca3cc;
+    text-align: center;
+    word-spacing: 1.5px;
+  }
+
+#forecast-weather-3 {
+  color: #bde6eb;
+  text-align: center;
+  font-size: 20px;
+}
+
+#forecast-weather-6 {
+  color: #bde6eb;
+  text-align: center;
+  font-size: 20px;
+}
+
+#forecast-weather-9 {
+  color: #bde6eb;
+  text-align: center;
+  font-size: 20px;
+}
+
+#forecast-weather-12 {
+  color: #bde6eb;
+  text-align: center;
+  font-size: 20px;
+}
+
+#forecast-15 {
+  background-color: white;
+  border-radius: 5px;
+}
+#forecast-weather-15 {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+
+.card-body {
+  background-color: #d8edf0;
+}
+
+#icon {
+  display: block;
+}
