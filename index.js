@@ -38,11 +38,15 @@ function displayWeatherCondition(response) {
 
 
 function displayForecast (response) {
+  let iconElement3 = document.querySelector("#forecast-3-icon");
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
   forecastWeather3.innerHTML = Math.round(response.data.list[0].main.temp) +"°C";
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
 
+  let iconElement6 = document.querySelector("#forecast-6-icon");
   let forecastWeather6 = document.querySelector("#forecast-weather-6");
   forecastWeather6.innerHTML = Math.round(response.data.list[1].main.temp) +"°C";
+  iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
 
   let forecastWeather9 = document.querySelector("#forecast-weather-9");
   forecastWeather9.innerHTML = Math.round(response.data.list[2].main.temp) +"°C";
