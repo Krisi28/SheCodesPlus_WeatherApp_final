@@ -30,7 +30,7 @@ function displayWeatherCondition(response) {
     document.querySelector("#humidity").innerHTML =
       "Humidity: " + Math.round(response.data.main.humidity ) + "%";
     document.querySelector("#wind").innerHTML =
-      "Wind: " + Math.round(response.data.wind.speed ) + "km/h";
+      "Wind: " + Math.round(response.data.wind.speed ) + " km/h";
     document.querySelector("#chance-of-rain").innerHTML =
       "Condition: " + response.data.weather[0].main;
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
