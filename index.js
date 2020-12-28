@@ -36,8 +36,22 @@ function displayWeatherCondition(response) {
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
   }
 
+
 function displayForecast (response) {
-  console.log(response.data);
+  let forecastWeather3 = document.querySelector("#forecast-weather-3");
+  forecastWeather3.innerHTML = Math.round(response.data.list[0].main.temp) +"°C";
+
+  let forecastWeather6 = document.querySelector("#forecast-weather-6");
+  forecastWeather6.innerHTML = Math.round(response.data.list[1].main.temp) +"°C";
+
+  let forecastWeather9 = document.querySelector("#forecast-weather-9");
+  forecastWeather9.innerHTML = Math.round(response.data.list[2].main.temp) +"°C";
+
+  let forecastWeather12 = document.querySelector("#forecast-weather-12");
+  forecastWeather12.innerHTML = Math.round(response.data.list[3].main.temp) +"°C";
+
+  let forecastWeather15 = document.querySelector("#forecast-weather-15");
+  forecastWeather15.innerHTML = Math.round(response.data.list[4].main.temp) +"°C";
 }
 
 
