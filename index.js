@@ -37,25 +37,43 @@ function displayWeatherCondition(response) {
   }
 
 
-function displayForecast (response) {
-  let iconElement3 = document.querySelector("#forecast-3-icon");
+function displayForecast3 (response) {
+  //let iconElement3 = document.querySelector("#forecast-3-icon");
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
-  forecastWeather3.innerHTML = Math.round(response.data.list[0].main.temp) +"°C";
-  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
+  let tempMax = Math.round(response.data.list[0].main.temp_max);
+  let tempMin = Math.round(response.data.list[0].main.temp_min);
+  forecastWeather3.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+  //iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`);
+} 
 
-  let iconElement6 = document.querySelector("#forecast-6-icon");
+function displayForecast6 (response) {
+  //let iconElement6 = document.querySelector("#forecast-6-icon");
   let forecastWeather6 = document.querySelector("#forecast-weather-6");
-  forecastWeather6.innerHTML = Math.round(response.data.list[1].main.temp) +"°C";
-  iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
+  let tempMax = Math.round(response.data.list[1].main.temp_max);
+  let tempMin = Math.round(response.data.list[1].main.temp_min);
+  forecastWeather6.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+  //iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
+}
 
+function displayForecast9 (response) {
   let forecastWeather9 = document.querySelector("#forecast-weather-9");
-  forecastWeather9.innerHTML = Math.round(response.data.list[2].main.temp) +"°C";
+  let tempMax = Math.round(response.data.list[2].main.temp_max);
+  let tempMin = Math.round(response.data.list[2].main.temp_min);
+  forecastWeather9.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+}
 
+function displayForecast12 (response) {
   let forecastWeather12 = document.querySelector("#forecast-weather-12");
-  forecastWeather12.innerHTML = Math.round(response.data.list[3].main.temp) +"°C";
+  let tempMax = Math.round(response.data.list[3].main.temp_max);
+  let tempMin = Math.round(response.data.list[3].main.temp_min);
+  forecastWeather12.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+}
 
+function displayForecast15 (response) {
   let forecastWeather15 = document.querySelector("#forecast-weather-15");
-  forecastWeather15.innerHTML = Math.round(response.data.list[4].main.temp) +"°C";
+  let tempMax = Math.round(response.data.list[4].main.temp_max);
+  let tempMin = Math.round(response.data.list[4].main.temp_min);
+  forecastWeather15.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
 }
 
 
@@ -65,7 +83,15 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayWeatherCondition);
 
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast)
+  axios.get(apiUrl).then(displayForecast3)
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast6)
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast9)
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast12)
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast15)
 }
 
 function handleSubmit(event) {
