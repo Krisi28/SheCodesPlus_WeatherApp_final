@@ -37,7 +37,7 @@ function displayWeatherCondition(response) {
   }
 
 function displayForecast (response) {
-  
+  console.log(response.data);
 }
 
 
