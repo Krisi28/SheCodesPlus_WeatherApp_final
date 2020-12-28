@@ -24,14 +24,17 @@ function displayWeatherCondition(response) {
   document.querySelector("#input-city").innerHTML = response.data.name;
   document.querySelector("#weather-input-city").innerHTML =
     Math.round(response.data.main.temp) + "°C";
+    
+    let iconElement = document.querySelector("#icon");
 
-  document.querySelector("#detail-high").innerHTML =
-    "High:" + Math.round(response.data.main.temp_max ) + "°C";
-  document.querySelector("#detail-low").innerHTML =
-    "Low:" + Math.round(response.data.main.temp_min ) + "°C";
-  document.querySelector("#detail-chance-of-rain").innerHTML =
-    "Condition: " + response.data.weather[0].main;
-}
+    document.querySelector("#humidity").innerHTML =
+      "Humidity: " + Math.round(response.data.main.humidity ) + "%";
+    document.querySelector("#wind").innerHTML =
+      "Wind: " + Math.round(response.data.wind.speed ) + "km/h";
+    document.querySelector("#chance-of-rain").innerHTML =
+      "Condition: " + response.data.weather[0].main;
+    iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
+  }
 
 function searchCity(city) {
   let apiKey = "5d69d77efd19c056bafcabc326753fce";
