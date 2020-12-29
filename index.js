@@ -38,12 +38,12 @@ function displayWeatherCondition(response) {
 
 
 function displayForecast3 (response) {
-  //let iconElement3 = document.querySelector("#forecast-3-icon");
+  let iconElement3 = document.querySelector("#forecast-3-icon");
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
   let tempMax = Math.round(response.data.list[0].main.temp_max);
   let tempMin = Math.round(response.data.list[0].main.temp_min);
-  forecastWeather3.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
-  //iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`);
+  forecastWeather3.innerHTML = `${tempMax} °C | ${tempMin} °C`;
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`);
 } 
 
 function displayForecast6 (response) {
@@ -51,7 +51,7 @@ function displayForecast6 (response) {
   let forecastWeather6 = document.querySelector("#forecast-weather-6");
   let tempMax = Math.round(response.data.list[1].main.temp_max);
   let tempMin = Math.round(response.data.list[1].main.temp_min);
-  forecastWeather6.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+  forecastWeather6.innerHTML = `${tempMax} °C | ${tempMin} °C`;
   //iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
 }
 
@@ -59,14 +59,14 @@ function displayForecast9 (response) {
   let forecastWeather9 = document.querySelector("#forecast-weather-9");
   let tempMax = Math.round(response.data.list[2].main.temp_max);
   let tempMin = Math.round(response.data.list[2].main.temp_min);
-  forecastWeather9.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+  forecastWeather9.innerHTML = `${tempMax} °C | ${tempMin} °C`;
 }
 
 function displayForecast12 (response) {
   let forecastWeather12 = document.querySelector("#forecast-weather-12");
   let tempMax = Math.round(response.data.list[3].main.temp_max);
   let tempMin = Math.round(response.data.list[3].main.temp_min);
-  forecastWeather12.innerHTML = `Max.: ${tempMax} °C | Min.: ${tempMin} °C`;
+  forecastWeather12.innerHTML = `${tempMax} °C | ${tempMin} °C`;
 }
 
 function displayForecast15 (response) {

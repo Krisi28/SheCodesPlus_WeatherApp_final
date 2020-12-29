@@ -7,12 +7,13 @@ h1 {
   padding: 10px 100px 10px 100px;
   margin: 10px 260px 10px 260px;
   background-color: #bde6eb;
+  text-shadow: white 1.5px 1px;
 }
 
 .application {
     border: 2px solid #fca3cc;
     padding: 20px;
-    background-color: #fdcfdf;
+    background-color: #fbbedf;
   };
   
 .header {
@@ -135,42 +136,46 @@ h5 {
     color: #fca3cc;
     text-align: center;
     word-spacing: 1.5px;
+    text-shadow: white 1.5px 1px;
   }
 
 #forecast-weather-3 {
-  color: #bde6eb;
+  color: #fca3cc;
   text-align: center;
   font-size: 20px;
+  word-spacing: 1.5px;
+  text-shadow: white 1.5px 1px;
 }
 
 #forecast-weather-6 {
-  color: #bde6eb;
+  color: #fca3cc;
   text-align: center;
   font-size: 20px;
+  text-shadow: white 1.5px 1px;
 }
 
 #forecast-weather-9 {
-  color: #bde6eb;
+  color: #fca3cc;
   text-align: center;
   font-size: 20px;
+  text-shadow: white 1.5px 1px;
 }
 
 #forecast-weather-12 {
-  color: #bde6eb;
+  color: #fca3cc;
   text-align: center;
   font-size: 20px;
+  text-shadow: white 1.5px 1px;
 }
 
 
 #forecast-weather-15 {
-  color: white;
+  color: #fca3cc;
   text-align: center;
   font-size: 20px;
+  text-shadow: white 1.5px 1px;
 }
 
-.card-body {
-  background-color: #d8edf0;
-}
 
 #icon {
   display: block;
