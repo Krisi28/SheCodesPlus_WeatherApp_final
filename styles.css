@@ -26,7 +26,7 @@ h1 {
     text-align: center;
     margin: 0 auto;
     font-family: Arial, Helvetica, sans-serif;
-  };
+  }
 
   
 .card-text {
@@ -60,18 +60,20 @@ footer {
   
 #current-location-button {
     background-color: #fca3cc;
-    color: #bde6eb;
+    color: white;
     border: #bde6eb;
     border-radius: 3px;
     font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
   }
   
 #search-button {
     background-color: #bde6eb;
-    color: #fca3cc;
+    color:white;
     border: #bde6eb;
     border-radius: 3px;
     font-family: Arial, Helvetica, sans-serif;
+    border: 2px solid white;
   }
   
 #input-city {
@@ -92,6 +94,7 @@ footer {
   padding-bottom: 15px;
   padding-left: 5px;
   border-radius: 5px;
+  text-align: center;
 }
 
 #weather-input-city {
@@ -103,6 +106,15 @@ footer {
     border-radius: 5px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+.units {
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 5px;
+  border-radius: 5px;
+  padding-right: 5px;
+}
   
 #condition {
     color: #fdcfdf;
