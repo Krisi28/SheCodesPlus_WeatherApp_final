@@ -34,6 +34,10 @@ function displayWeatherCondition(response) {
     document.querySelector("#condition").innerHTML =
       "Condition: " + response.data.weather[0].main;
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
+
+
+
+    celsiusTempreture = response.data.main.temp;
   }
 
 
@@ -115,10 +119,14 @@ function getCurrentLocation(event) {
 
 function displayFahrenheitTempreture(event) {
   event.preventDefault();
-  let fahrenheitTempreture = (14 * 9 / 5) + 32;
   let tempretureElement = document.querySelector("#weather-input-city");
+  let fahrenheitTempreture = (celsiusTempreture * 9 / 5) + 32;
   tempretureElement.innerHTML = Math.round(fahrenheitTempreture) + " °F";
 }
+
+let celsiusTempreture = null;
+
+
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -129,3 +137,5 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTempreture);
+
+searchCity("Vienna");
