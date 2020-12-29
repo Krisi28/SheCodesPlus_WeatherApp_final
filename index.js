@@ -19,11 +19,10 @@ currentTime.innerHTML = day + ", " + hours + ":" + minutes;
 
 
 
-//week5
 function displayWeatherCondition(response) {
   document.querySelector("#input-city").innerHTML = response.data.name;
   document.querySelector("#weather-input-city").innerHTML =
-    Math.round(response.data.main.temp) + "°C";
+    Math.round(response.data.main.temp) + " °C";
     
     let iconElement = document.querySelector("#icon");
 
@@ -34,8 +33,6 @@ function displayWeatherCondition(response) {
     document.querySelector("#condition").innerHTML =
       "Condition: " + response.data.weather[0].main;
     iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`); 
-
-
 
     celsiusTempreture = response.data.main.temp;
   }
@@ -124,8 +121,13 @@ function displayFahrenheitTempreture(event) {
   tempretureElement.innerHTML = Math.round(fahrenheitTempreture) + " °F";
 }
 
-let celsiusTempreture = null;
+function displayCelsiusTempreture(event) {
+  event.preventDefault();
+  let tempretureElement = document.querySelector("#weather-input-city");
+  tempretureElement.innerHTML = Math.round(celsiusTempreture) + " °C";
+}
 
+let celsiusTempreture = null;
 
 
 let searchForm = document.querySelector("#search-form");
@@ -137,5 +139,8 @@ currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTempreture);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTempreture);
 
 searchCity("Vienna");
