@@ -15,8 +15,7 @@ let day = days[now.getDay()];
 let hours = now.getHours();
 let minutes = now.getMinutes();
 
-currentTime.innerHTML = day + ", " + hours + ":" + minutes;
-
+currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + minutes;
 
 
 function displayWeatherCondition(response) {
@@ -43,22 +42,17 @@ function displayForecast3 (response) {
   let tempMax = Math.round(response.data.list[0].main.temp_max);
   let tempMin = Math.round(response.data.list[0].main.temp_min);
   forecastWeather3.innerHTML = `${tempMax} °C | ${tempMin} °C`;
-} 
-  
-function displayForecastIcon3 () {
   let iconElement3 = document.querySelector("#forecast-3-icon");
-  iconElement3.setAttribute("src", "http://openweathermap.org/img/wn/10d@2x.png");
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 }
 
-
-
 function displayForecast6 (response) {
-  //let iconElement6 = document.querySelector("#forecast-6-icon");
   let forecastWeather6 = document.querySelector("#forecast-weather-6");
   let tempMax = Math.round(response.data.list[1].main.temp_max);
   let tempMin = Math.round(response.data.list[1].main.temp_min);
   forecastWeather6.innerHTML = `${tempMax} °C | ${tempMin} °C`;
-  //iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.list.weather[0].icon}@2x.png`); 
+  let iconElement6 = document.querySelector("#forecast-6-icon");
+  iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[1].icon}@2x.png`); 
 }
 
 function displayForecast9 (response) {
@@ -66,6 +60,8 @@ function displayForecast9 (response) {
   let tempMax = Math.round(response.data.list[2].main.temp_max);
   let tempMin = Math.round(response.data.list[2].main.temp_min);
   forecastWeather9.innerHTML = `${tempMax} °C | ${tempMin} °C`;
+  let iconElement9 = document.querySelector("#forecast-9-icon");
+  iconElement9.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[2].icon}@2x.png`);
 }
 
 function displayForecast12 (response) {
@@ -73,6 +69,8 @@ function displayForecast12 (response) {
   let tempMax = Math.round(response.data.list[3].main.temp_max);
   let tempMin = Math.round(response.data.list[3].main.temp_min);
   forecastWeather12.innerHTML = `${tempMax} °C | ${tempMin} °C`;
+  let iconElement12 = document.querySelector("#forecast-12-icon");
+  iconElement12.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[3].icon}@2x.png`);
 }
 
 function displayForecast15 (response) {
@@ -80,6 +78,8 @@ function displayForecast15 (response) {
   let tempMax = Math.round(response.data.list[4].main.temp_max);
   let tempMin = Math.round(response.data.list[4].main.temp_min);
   forecastWeather15.innerHTML = `${tempMax} °C | ${tempMin} °C`;
+  let iconElement15 = document.querySelector("#forecast-15-icon");
+  iconElement15.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[4].icon}@2x.png`);
 }
 
 
@@ -110,8 +110,10 @@ function handleSubmit(event) {
 }
 
 function searchLocation(position) {
+  console.log("searchLocation");
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
+  
   let apiKey = "d69d77efd19c056bafcabc326753fce";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
@@ -120,6 +122,7 @@ function searchLocation(position) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
+  console.log("getCurrentLocation");
 }
 
 function displayFahrenheitTempreture(event) {
@@ -134,7 +137,6 @@ function displayCelsiusTempreture(event) {
   let tempretureElement = document.querySelector("#weather-input-city");
   tempretureElement.innerHTML = Math.round(celsiusTempreture) + " °C";
 }
-
 
 
 let celsiusTempreture = null;

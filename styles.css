@@ -196,4 +196,10 @@ h5 {
 #icon {
   display: block;
   text-align: center;
+  width: 80%;
+}
+
+#forecast-3-icon {
+  display: inline-block;
+  width: 50%;
 }
