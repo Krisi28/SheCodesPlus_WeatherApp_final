@@ -47,7 +47,7 @@ function displayForecast3 (response) {
   let iconElement3 = document.querySelector("#forecast-3-icon");
   iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
   
-  console.log("hallo 2");
+  console.log("hallo 3");
   console.log(response.data);
 
   let forecastTime3 = document.querySelector("#time-3");
