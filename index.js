@@ -23,8 +23,10 @@ currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + minutes;
 
 function formatHours(timestamp) {
 
-  let hours = now.getHours();
-  let minutes = now.getMinutes();
+  let time = new Date(timestamp);
+
+  let hours = time.getHours();
+  let minutes = time.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;}
 
