@@ -36,7 +36,7 @@ function displayWeatherCondition(response) {
     celsiusTempreture = response.data.main.temp;
   }
 
-  
+
 
 function displayForecast3 (response) {
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
@@ -47,6 +47,8 @@ function displayForecast3 (response) {
   let iconElement3 = document.querySelector("#forecast-3-icon");
   iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
   
+  console.log("hallo");
+
   let forecastTime3 = document.querySelector("#time-3");
   forecastTime3 = forecast.dt_txt;
 }
@@ -116,7 +118,6 @@ function handleSubmit(event) {
 }
 
 function searchLocation(position) {
-  console.log("searchLocation");
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   
@@ -128,7 +129,6 @@ function searchLocation(position) {
 function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
-  console.log("getCurrentLocation");
 }
 
 function displayFahrenheitTempreture(event) {
