@@ -1,5 +1,5 @@
-let now = new Date();
 
+let now = new Date();
 let currentTime = document.querySelector("#current-time");
 
 let days = [
@@ -11,11 +11,25 @@ let days = [
   "Friday",
   "Saturday"
 ];
+
 let day = days[now.getDay()];
 let hours = now.getHours();
 let minutes = now.getMinutes();
+if (minutes < 10) {minutes = `0${minutes}`;}
 
-currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + formatMinutes(minutes);
+currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + minutes;
+
+
+
+function formatHours(timestamp) {
+
+  let hours = now.getHours();
+  let minutes = now.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;}
+
+  return `${hours}:${minutes}`;
+}
 
 
 function displayWeatherCondition(response) {
@@ -50,8 +64,7 @@ function displayForecast3 (response) {
   console.log(response.data.list[0].dt);
 
   let forecastTime3 = document.querySelector("#time-3");
-  let time3 = new Date(forecast.dt*1000);
-  forecastTime3.innerHTML = time3.getHours() + ":" + time3.getMinutes();
+  forecastTime3.innerHTML = `${formatHours(forecast.dt*1000)}`;
 }
 
 function displayForecast6 (response) {
