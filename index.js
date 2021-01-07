@@ -40,9 +40,11 @@ function displayWeatherCondition(response) {
 
 function displayForecast3 (response) {
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
+  let forecastTime3 = document.querySelector("#forecast-3");
   let tempMax = Math.round(response.data.list[0].main.temp_max);
   let tempMin = Math.round(response.data.list[0].main.temp_min);
-  forecastWeather3.innerHTML = `${tempMax} °C | ${tempMin} °C`;
+  forecastWeather3.innerHTML = `${forecastTime3}
+  ${tempMax} °C | ${tempMin} °C`;
   let forecast = response.data.list[0];
   let iconElement3 = document.querySelector("#forecast-3-icon");
   iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
@@ -55,7 +57,7 @@ function displayForecast6 (response) {
   forecastWeather6.innerHTML = `${tempMax} °C | ${tempMin} °C`; 
   let forecast = response.data.list[1];
   let iconElement6 = document.querySelector("#forecast-6-icon");
-  iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[1].icon}@2x.png`);
+  iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
 }
 
 function displayForecast9 (response) {
