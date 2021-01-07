@@ -41,7 +41,7 @@ function displayWeatherCondition(response) {
 function displayForecast3 (response) {
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
   let forecastTime3 = document.querySelector("#forecast-3");
-  forecastTime3 = ${formatHours(forecast.dt*1000)};
+  forecastTime3 = `${formatHours(forecast.dt*1000)}`;
   let tempMax = Math.round(response.data.list[0].main.temp_max);
   let tempMin = Math.round(response.data.list[0].main.temp_min);
   forecastWeather3.innerHTML = `${forecastTime3}
