@@ -47,7 +47,7 @@ function displayForecast3 (response) {
   let iconElement3 = document.querySelector("#forecast-3-icon");
   iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
   
-  console.log("hallo");
+  console.log("hallo oida");
 
   let forecastTime3 = document.querySelector("#time-3");
   forecastTime3 = forecast.dt_txt;
