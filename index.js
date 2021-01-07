@@ -43,7 +43,7 @@ function displayForecast3 (response) {
   let tempMin = Math.round(response.data.list[0].main.temp_min);
   forecastWeather3.innerHTML = `${tempMax} °C | ${tempMin} °C`;
   let iconElement3 = document.querySelector("#forecast-3-icon");
-  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
 }
 
 function displayForecast6 (response) {
