@@ -51,7 +51,7 @@ function displayForecast3 (response) {
   console.log(response.data);
 
   let forecastTime3 = document.querySelector("#time-3");
-  forecastTime3 = forecast.dt_txt;
+  forecastTime3 = "15:00";
 }
 
 function displayForecast6 (response) {
