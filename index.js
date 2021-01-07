@@ -60,8 +60,6 @@ function displayForecast3 (response) {
   let forecast = response.data.list[0];
   let iconElement3 = document.querySelector("#forecast-3-icon");
   iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
-  
-  console.log(response.data.list[0].dt);
 
   let forecastTime3 = document.querySelector("#time-3");
   forecastTime3.innerHTML = `${formatHours(forecast.dt*1000)}`;
@@ -75,6 +73,9 @@ function displayForecast6 (response) {
   let forecast = response.data.list[1];
   let iconElement6 = document.querySelector("#forecast-6-icon");
   iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
+
+  let forecastTime6 = document.querySelector("#time-6");
+  forecastTime6.innerHTML = `${formatHours(forecast.dt*1000)}`;
 }
 
 function displayForecast9 (response) {
@@ -85,6 +86,9 @@ function displayForecast9 (response) {
   let forecast = response.data.list[2];
   let iconElement9 = document.querySelector("#forecast-9-icon");
   iconElement9.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
+
+  let forecastTime9 = document.querySelector("#time-9");
+  forecastTime9.innerHTML = `${formatHours(forecast.dt*1000)}`;
 }
 
 function displayForecast12 (response) {
@@ -95,6 +99,9 @@ function displayForecast12 (response) {
   let forecast = response.data.list[3];
   let iconElement12 = document.querySelector("#forecast-12-icon");
   iconElement12.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
+
+  let forecastTime12 = document.querySelector("#time-12");
+  forecastTime12.innerHTML = `${formatHours(forecast.dt*1000)}`;
 }
 
 function displayForecast15 (response) {
@@ -105,6 +112,9 @@ function displayForecast15 (response) {
   let forecast = response.data.list[4];
   let iconElement15 = document.querySelector("#forecast-15-icon");
   iconElement15.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
+
+  let forecastTime15 = document.querySelector("#time-15");
+  forecastTime15.innerHTML = `${formatHours(forecast.dt*1000)}`;
 }
 
 
