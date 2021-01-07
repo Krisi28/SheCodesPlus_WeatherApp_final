@@ -13,9 +13,9 @@ let days = [
 ];
 let day = days[now.getDay()];
 let hours = now.getHours();
-let minutes = now.getMinutes()toFixed(2);
+let minutes = now.getMinutes();
 
-currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + minutes;
+currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + formatHours(minutes);
 
 
 function displayWeatherCondition(response) {
