@@ -55,6 +55,9 @@ function displayForecast6 (response) {
   forecastWeather6.innerHTML = `${tempMax} °C | ${tempMin} °C`;
   let iconElement6 = document.querySelector("#forecast-6-icon");
   iconElement6.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[1].icon}@2x.png`); 
+  let forecast = response.data.list[1];
+  let iconElement3 = document.querySelector("#forecast-6-icon");
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[1].icon}@2x.png`);
 }
 
 function displayForecast9 (response) {
@@ -64,6 +67,9 @@ function displayForecast9 (response) {
   forecastWeather9.innerHTML = `${tempMax} °C | ${tempMin} °C`;
   let iconElement9 = document.querySelector("#forecast-9-icon");
   iconElement9.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[2].icon}@2x.png`);
+  let forecast = response.data.list[2];
+  let iconElement3 = document.querySelector("#forecast-9-icon");
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[2].icon}@2x.png`);
 }
 
 function displayForecast12 (response) {
@@ -73,6 +79,9 @@ function displayForecast12 (response) {
   forecastWeather12.innerHTML = `${tempMax} °C | ${tempMin} °C`;
   let iconElement12 = document.querySelector("#forecast-12-icon");
   iconElement12.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[3].icon}@2x.png`);
+  let forecast = response.data.list[3];
+  let iconElement3 = document.querySelector("#forecast-12-icon");
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[3].icon}@2x.png`);
 }
 
 function displayForecast15 (response) {
@@ -82,6 +91,9 @@ function displayForecast15 (response) {
   forecastWeather15.innerHTML = `${tempMax} °C | ${tempMin} °C`;
   let iconElement15 = document.querySelector("#forecast-15-icon");
   iconElement15.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[4].icon}@2x.png`);
+  let forecast = response.data.list[4];
+  let iconElement3 = document.querySelector("#forecast-15-icon");
+  iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[4].icon}@2x.png`);
 }
 
 
