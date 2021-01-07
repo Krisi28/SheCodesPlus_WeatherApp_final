@@ -50,7 +50,7 @@ function displayForecast3 (response) {
   console.log(response.data.list[0].dt);
 
   let forecastTime3 = document.querySelector("#time-3");
-  forecastTime3.innerHTML = forecast.dt;
+  forecastTime3.innerHTML = forecast.dt*1000;
 }
 
 function displayForecast6 (response) {
