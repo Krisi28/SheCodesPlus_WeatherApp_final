@@ -51,7 +51,7 @@ function displayForecast3 (response) {
 
   let forecastTime3 = document.querySelector("#time-3");
   let time3 = new Date(forecast.dt*1000);
-  forecastTime3.innerHTML = time3.getHours + ":" + time3.getMinutes;
+  forecastTime3.innerHTML = time3.getHours() + ":" + time3.getMinutes();
 }
 
 function displayForecast6 (response) {
