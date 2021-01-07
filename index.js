@@ -36,12 +36,14 @@ function displayWeatherCondition(response) {
     celsiusTempreture = response.data.main.temp;
   }
 
+  
 
 function displayForecast3 (response) {
   let forecastWeather3 = document.querySelector("#forecast-weather-3");
   let tempMax = Math.round(response.data.list[0].main.temp_max);
   let tempMin = Math.round(response.data.list[0].main.temp_min);
   forecastWeather3.innerHTML = `${tempMax} °C | ${tempMin} °C`;
+  let forecast = response.data.list[0];
   let iconElement3 = document.querySelector("#forecast-3-icon");
   iconElement3.setAttribute("src", `http://openweathermap.org/img/wn/${forecast.weather[0].icon}@2x.png`);
 }
@@ -98,9 +100,6 @@ function searchCity(city) {
   axios.get(apiUrl).then(displayForecast12)
   apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast15)
-
-  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecastIcon3)
 }
 
 function handleSubmit(event) {
