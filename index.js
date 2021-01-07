@@ -13,7 +13,7 @@ let days = [
 ];
 let day = days[now.getDay()];
 let hours = now.getHours();
-let minutes = now.getMinutes("##");
+let minutes = now.getMinutes()toFixed(2);
 
 currentTime.innerHTML = "Last updated: " + day + ", " + hours + ":" + minutes;
 
